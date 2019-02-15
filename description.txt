@@ -1,0 +1,17 @@
+
+goal was to make a book landing page that was the average of many landing pages I had seen. 
+It was supposed to be flat, neat and safe.
+
+
+NEW STUFF:
+- generally responsive website with media queries;
+- fixed navigation bar;
+- basic rough dropdown menu;
+- testimonials section with horizontal scrollbar and incompatible scrollbar property;
+- contact form with: 
+    - buttons changing display property,
+    - input in words of thanks, else: a nice haiku,
+    - erased input values after quitting the contact form;
+- section with flexible elements and media-query-dependent order property;
+- <img> with srcset & sizes;
+
