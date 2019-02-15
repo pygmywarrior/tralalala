@@ -1,0 +1,638 @@
+*{
+    box-sizing: border-box; 
+}
+
+html{
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body, input, label, textarea, select, button{
+    font-size: 10px;
+    max-width: 100%;
+    height: auto;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+p, h{
+    line-height: 1.6;
+}
+
+a:hover,
+button:hover{
+    cursor: pointer;
+}
+
+.about-btn a{
+    color: rgb(192, 192, 192);
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.intro-sec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: #ffffff;
+    padding: 3rem 1rem 6rem 1rem;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(92, 92, 92, 0.473);
+    z-index: 90;
+    position: relative;
+}
+
+.book-cover1{
+    display: block;
+    background-color:#ffffff;
+    
+    padding: 0;
+    margin: 0;
+}
+
+.cont-text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 90%;
+    max-width: 90vw;
+    background-color: #ffffff;
+}
+.header1{
+    color: #000000;
+    font-size: 1.8rem;
+}
+
+.description1{
+    font-size: 1.3rem;
+}
+
+.order-box1{
+    height: auto;
+    flex-basis: 90%;
+    max-width: 90vw;
+    background-color: black;
+    padding: 0 0.8rem 2rem 0.8rem;
+    margin-top: 3rem;
+}
+
+.order-box2{
+    display: none;
+}
+
+.order-text{
+    font-size: 2em;
+    text-align: center;
+    color:#ffffff;
+}
+
+.order-box-btn{
+    background-color: rgb(250, 150, 0);
+    border: none; 
+    display: block;
+    margin: auto;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 1.5em;
+
+}
+
+.order-box-btn:hover{
+    background-color:rgb(226, 159, 59);
+}
+
+.order-box-btn:active{
+    background-color:  rgb(175, 107, 4) ;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 1rem;
+    display: block;
+    margin: 0 auto;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes float{
+    0% { transform: translatey(0)}
+    25% { transform: translatey( 0.5rem )}
+    50% { transform: translatey(0)}
+    75% { transform: translatey(-0.5rem )}
+    100% {transform: translatey(0)}
+
+}
+
+
+.ebook-sec{
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+.discount{
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.ebook-img{
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.discount-description{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+.bullet-sec{
+    background: #fbc333;
+    width: 100%;
+    padding: 2rem 0.5rem;
+}
+
+.bullet-sec h1{
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.bullet-point{
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+}
+
+
+.endo-sec{
+    background-color: #1b1b1b;
+    width: 100%;
+    margin: 0; 
+    padding: 2rem 0;
+}
+
+.endo-sec p{
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+.slideshow{
+    width: 80vw;
+    height: auto;
+    background-color: (250, 150, 0);
+    white-space: nowrap;
+    /*display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;    
+    align-items: flex-start;         */
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+}
+
+.slideshow::-webkit-scrollbar{
+    height: 1rem;
+    width: 0;
+}
+
+.slideshow::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    background: rgba(209, 209, 209, 0.747)
+}
+
+.slideshow::-webkit-scrollbar-thumb {
+    background: rgb(192, 192, 192); 
+    border-radius: 10px;
+}
+
+.slideshow::-webkit-scrollbar-thumb:hover {
+    background: rgb(209, 209, 209); 
+}
+
+.slide{
+    vertical-align: text-top;
+    display: inline-block;
+    scroll-snap-align: start;
+    height: auto;
+    background-color: #1b1b1b;
+    margin: 0 0 0 0;
+    padding: 3vw;
+    width:80vw;
+    flex-basis: auto;
+    white-space: pre-wrap;    
+}
+
+.slide-img{
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+p.quote,
+p.signer{
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: normal;
+    white-space: wrap;
+    width: 100%;
+    padding: 0;
+}
+
+
+.share-sec{
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem 0 0 0;
+}
+
+.share-sec p{
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 600;
+    padding: 1rem 0 1rem 0;
+}
+
+.logo-cont{
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: flex-start; 
+}
+
+.logo-cont a{
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    margin: 2rem 0;
+}
+
+.share-logo{ 
+    text-align: center;
+    display: inline-block;
+    width: 5rem;
+    height: auto;
+    border-radius: 5%;
+    padding: 0.5rem;
+    /*transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 0; */
+}
+
+
+.break{
+    width: 90%;
+    height: 1px;
+}
+
+
+/*
+    animation-name: enlarge;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+@keyframes enlarge {
+    0%   {width:5rem}
+    100% {width: 5.3rem;}
+    } */
+
+    
+    .logo1:hover,
+    .logo2:hover,
+    .logo3:hover,
+    .logo4:hover{
+    animation-name: glow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: none}
+    100% {box-shadow: 0 0 5px 1px rgb(250, 150, 0)}
+}
+
+.share-logo:active{
+    opacity: 0.6;
+}
+
+p.copyright{
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin: 0;
+}
+
+
+/*   MOBILE ALERT    */
+
+@media only screen and (min-width: 425px) { 
+
+    .slide{
+        width: 16rem;
+    }
+
+}
+
+
+
+
+
+/*  THIS ONE IS TABLET  */
+
+@media only screen and (min-width: 768px) { 
+
+
+    .intro-sec{
+        background-color: #ffffff;
+        height: auto;
+        padding: 5rem 2.5rem 4rem 0;
+
+    }
+
+    .book-cover1{
+        margin: 1rem;
+    }
+    .cont-text1{
+        flex-basis: 15%;
+        margin-left: 4%;
+    }
+
+    .order-box1{
+        flex-basis: 60%;
+    }
+
+
+    .ebook-sec{
+        padding: 2rem;
+    }
+
+    .discount{
+        font-size: 1.7rem;
+    }
+
+    .ebook-img{
+        order: 2;
+    }
+    
+    .discount-description{
+        order: 1;
+        font-size: 1.5rem;
+        flex-basis: 37%;
+    }
+    .bullet-sec h1{
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .bullet-point{
+        font-size: 1.9rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .bullet-sec ul{
+        width: 90vw;
+        margin: 0 auto 0 2rem;
+    }
+
+
+    .endo-sec p{
+        font-size: 1.7rem;
+    }
+
+    .slideshow::-webkit-scrollbar{
+        height: 1.6rem;
+    }
+
+    .slide{
+        width: 16rem;
+    }
+
+    .slide-img{
+        padding: 0;
+    }
+
+    p.quote,
+    p.signer{
+
+        font-size: 1rem;    
+    }
+
+    .share-sec p{
+        font-size: 1.7rem
+
+    }
+
+    .break{
+        display: none;
+    }
+
+    p.copyright{
+        padding: 1rem;
+        font-size: 0.9rem;
+        font-weight: 200;
+    }
+
+}
+
+
+
+
+
+
+/*  Here we've got... idk a nice breakpoint   */
+
+@media only screen and (min-width: 1024px) {  
+
+    .order-box1{
+        display: none;
+    }
+
+    .order-box2{
+        display: block;
+        height: auto;
+        width: 21rem;
+        background-color: black;
+        padding: 0 0.8rem 2rem 0.8rem;
+        margin-top: 1.5rem;
+    }
+
+    .order-text{
+        font-size: 2em;
+    }
+
+    .discount{
+        font-size: 2rem;
+    }
+
+    .discount-description{
+        order: 1;
+        font-size: 1.7rem;
+        flex-basis: 42%;
+    }
+
+
+    .bullet-sec h1{
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .bullet-point{
+        font-size: 1.7rem;
+        margin-bottom: 2.8rem;
+    }
+
+    .bullet-sec ul{
+        width: 90vw;
+        margin: 0 auto 0 2rem;
+    }
+
+    .endo-sec p{
+        font-size: 1.8rem;
+    }    
+
+    .slideshow::-webkit-scrollbar{
+        height: 1.8rem;
+    }
+
+    .slide{
+        width: 33.333%;
+    }
+
+    .slide-img{
+    padding: 0;
+    }
+
+    p.quote,
+    p.signer{
+        font-size: 1.2rem;    
+    }
+
+    .share-sec p{
+        font-size: 1.8rem
+
+    }
+
+    .logo-cont{
+        width: 75vw;
+    }
+
+    .share-logo{ 
+        width: 6rem;
+    }
+
+    
+    @keyframes move {
+        0%   {width:6rem}
+        100% {width: 6.8rem;}
+        }
+}
+
+
+p.copyright{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .header1{
+        font-size: 2.2rem;
+    }
+    
+    .description1{
+        font-size: 1.5rem;
+    }
+
+    .order-box2{
+        height: auto;
+        width: 23rem;
+        background-color: black;
+        padding: 0 0.8rem 2rem 0.8rem;
+        margin-top: 2rem;
+    }
+
+    .order-text{
+        font-size: 2.4em;
+    }
+
+    .order-box-btn{
+        font-size: 2.4em;
+    }
+
+    .endo-sec p{
+        font-size: 2rem;
+    }
+
+    .slideshow{
+        width: 70vw;
+    }
+
+    p.quote,
+    p.signer{
+        font-size: 1.3rem;    
+    }
+
+    .share-sec p{
+        font-size: 2rem
+
+    }
+
+    .logo-cont{
+        width: 75vw;
+    }
+
+    .share-logo{ 
+        width: 7rem;
+    }
+
+    p.copyright{
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+}
